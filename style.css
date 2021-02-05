@@ -44,7 +44,7 @@ body {
   transform: rotate(-70deg);
 }
 
-.circle button {
+.circle__btn {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -56,61 +56,66 @@ body {
   color: #fff;
 }
 
-.circle button:focus {
+.circle__btn:focus {
   outline: none;
 }
 
-.circle button#open {
+.circle__btn--open {
   left: 60%;
 }
 
-.circle button#close {
+.circle__btn--close {
   top: 60%;
   transform: rotate(90deg);
   transform-origin: top left;
 }
 
-.container.show-nav + nav li {
+.container.show-nav + .nav .nav__list-item {
   transform: translateX(0);
   transition-delay: 0.3s;
 }
 
-nav {
+.nav {
   position: fixed;
   bottom: 40px;
   left: 0;
   z-index: 100;
 }
 
-nav ul {
+.nav__list {
   list-style: none;
   padding-left: 30px;
 }
 
-nav ul li {
+.nav__list-item {
   text-transform: uppercase;
   color: #fff;
   margin: 40px 0;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in;
+  cursor: pointer;
 }
 
-nav ul li i {
+.nav__list-item:hover {
+  opacity: 0.65;
+}
+
+.nav__list-item i {
   font-size: 20px;
   margin-right: 10px;
 }
 
-nav ul li + li {
+.nav__list-item:nth-child(2) {
   margin-left: 15px;
   transform: translateX(-150%);
 }
 
-nav ul li + li + li {
+.nav__list-item:last-child {
   margin-left: 30px;
   transform: translateX(-200%);
 }
 
-.content img {
+.content__img {
   max-width: 100%;
 }
 
@@ -119,16 +124,16 @@ nav ul li + li + li {
   margin: 50px auto;
 }
 
-.content h1 {
+.content__title {
   margin: 0;
 }
 
-.content small {
+.content__author {
   color: #555;
   font-style: italic;
 }
 
-.content p {
+.content__text {
   color: #333;
   line-height: 1.5;
 }
